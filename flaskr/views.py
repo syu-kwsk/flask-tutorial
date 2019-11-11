@@ -6,3 +6,8 @@ def index():
     name = "syukwsk"
     return render_template('index.html', name=name)
 
+@app.route('/attend/<string:name>')
+def attend(name):
+    print("/attend")
+    name = name + " attended"
+    return render_template('index.html', name=name)

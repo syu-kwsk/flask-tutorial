@@ -9,9 +9,9 @@
   </head>
   
   <body>
-    <h1>Home</h1>
+    <h1>{{name}}</h1>
     <div class="button_box">
-      <button class="button">プロ研にきた!</button>
+      <button class="button" onclick='location.href="{{ url_for('attend', name= name)}}"'>プロ研にきた!</button>
     </div>
     <div class="button_box">
       <button class="button">データを見る</button>
