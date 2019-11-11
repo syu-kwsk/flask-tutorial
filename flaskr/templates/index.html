@@ -2,10 +2,19 @@
 
 <html>
   <head>
-    <title>My flask first App</title>
+    <title>出欠アプリ</title>    
+    <meta charset=i"utf-8">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
   </head>
   
   <body>
-    My name is {{ name }}
+    <h1>Home</h1>
+    <div class="button_box">
+      <button class="button">プロ研にきた!</button>
+    </div>
+    <div class="button_box">
+      <button class="button">データを見る</button>
+    </div>
   </body>
 </html>
