@@ -1,3 +1,4 @@
+'''
 from sqlalchemy import Integer, Column, String, ForeignKey
 from sqlalchemy.orm import relationship
 from sqlalchemy.ext.declarative import declarative_base
@@ -86,3 +87,54 @@ for user in users:
         print("|- 日付：%s 出：%s 帰：%s" % (date.day, date.start, date.end))
    
     print('')
+'''
+from flaskr.models import db, Date, User
+from random import randint
+'''
+db.session.add(User(name="A"))
+db.session.add(User(name="B"))
+db.session.add(User(name="C"))
+db.session.add(User(name="D"))
+db.session.add(User(name="E"))
+db.session.add(User(name="F"))
+db.session.add(User(name="G"))
+db.session.add(User(name="H"))
+db.session.add(User(name="I"))
+db.session.add(User(name="J"))
+
+db.session.commit()
+
+def random_user():
+    return randint(1, 10)
+
+def random_day():
+    random_month = randint(1, 12)
+    random_day = randint(1, 31)
+    return str(random_month)+"/"+str(random_day)
+
+def random_time(time):
+    if time == "start":
+        random_start = randint(8, 15)
+        return str(random_start)+":00"
+
+    elif time == "end":
+        random_end = randint(16, 22)
+        return str(random_end)+":00"
+
+for i in range(100):
+    user = random_user()
+    day = random_day()
+    start = random_time("start")
+    end = random_time("end")
+    db.session.add(Date(users_id=user, day=day, start=start, end=end))
+
+db.session.commit()
+'''
+
+for i in range(1, 10):
+    user = User.query.filter_by(id=i).first()
+    print(user.name,"の出席")
+    for j in range(len(user.dates)):
+        print("   ",user.dates[j])
+
+
