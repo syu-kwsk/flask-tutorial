@@ -1,0 +1,7 @@
+{{user.name}}のページ
+
+<ul>
+{% for date in user.dates %}
+<li>{{date.day}}:{{date.start}}:{{date.end}}</li>
+{% endfor%}
+<ul>
