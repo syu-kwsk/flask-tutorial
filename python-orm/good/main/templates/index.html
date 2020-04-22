@@ -1,0 +1,11 @@
+{% extends "layout.html" %}
+
+{% block body %}
+  <link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
+<center>
+  <br><br><br><br>
+  <input type="button" id="slow-btn" class="btn-circle-3d" value="slow" onclick="location.href='{{url_for('slow')}}'">
+  <br><br><br><br>
+  <input type="button" id="fast-btn" class="btn-circle-3d" value="fast" onclick="location.href='{{url_for('fast')}}'">
+</center>
+{% endblock body %}

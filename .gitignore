@@ -1,4 +1,5 @@
 **/venv
 /flaskr/__pycache__/**
 /flaskr/flaskr.db
-
+**/__pycache__
+*.db

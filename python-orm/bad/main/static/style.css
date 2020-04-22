@@ -1,0 +1,15 @@
+.flash {
+  color: white;
+  background-color: blue;
+  text-align: center;
+  font-size: 20px;
+}
+.bgcolor {
+  background-color: #c2edff;
+  padding: 0.5em;
+}
+.title {
+  display:inline;
+  float: center;
+  font-size: 20px;
+}
